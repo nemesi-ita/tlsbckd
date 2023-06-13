@@ -71,7 +71,7 @@ def rcv(s):
                 try:
                     chdir(cmd[3:])
                 except FileNotFoundError:
-                    s.sendall(f"Directory non trovata: {cmd[3:]}\n".encode())
+                    s.sendall(f"Directory not found: {cmd[3:]}\n".encode())
                 continue
             elif cmd.startswith("EXIT"):
                 s.close()
